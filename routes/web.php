@@ -14,3 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('Podcasts/index', 'PodcastController@index');
+Route::get('Podcasts/create', 'PodcastController@create');
+Route::post('Podcasts/create', 'PodcastController@store');
+Route::get('Podcasts/edit/{podcast}', 'PodcastController@edit');
+Route::post('Podcasts/edit/{podcast}', 'PodcastController@update');
+Route::get('Podcasts/delete/{podcast}', 'PodcastController@destroy');
+Route::get('Podcasts/show/{podcast}', 'PodcastController@show');
