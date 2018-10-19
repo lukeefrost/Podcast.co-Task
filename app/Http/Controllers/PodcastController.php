@@ -16,7 +16,7 @@ class PodcastController extends Controller
     public function index()
     {
         $podcasts = Podcast::all();
-        return view ('Podcasts.index', compact('podcasts'));
+        return view ('podcasts.index', compact('podcasts'));
     }
 
     /**
@@ -26,7 +26,7 @@ class PodcastController extends Controller
     */
     public function create()
     {
-        return view ('Podcasts.create');
+        return view ('podcasts.create');
     }
 
     /**
@@ -45,7 +45,8 @@ class PodcastController extends Controller
         ]);
 
         Podcast::create($request->all());
-        return back()->with('success', 'Podcast Addition Created Successfully');
+        return response()->json($request, 201);
+        // return back()->with('success', 'Podcast Addition Created Successfully');
     }
 
     /**
@@ -56,7 +57,7 @@ class PodcastController extends Controller
     */
     public function show(Podcast $podcast)
     {
-        return view('Podcasts.show', compact('podcast'));
+        return view('podcasts.show', compact('podcast'));
     }
 
     /**
@@ -67,7 +68,7 @@ class PodcastController extends Controller
     */
     public function edit(Podcast $podcast)
     {
-        return view('Podcasts.edit', compact('podcast'));
+        return view('podcasts.edit', compact('podcast'));
     }
 
     /**
@@ -87,7 +88,8 @@ class PodcastController extends Controller
         ]);
 
         $podcast->update($request->all());
-        return back()->with('success', 'Podcast Details updated successfully');
+        return response()->json($podcast, 200);
+        // return back()->with('success', 'Podcast Details updated successfully');
     }
 
     /**
@@ -99,6 +101,7 @@ class PodcastController extends Controller
     public function destroy(Podcast $podcast)
     {
         $podcast->delete();
-        return back()->with('success', 'Podcast deleted successfully');
+        return response()->json(null, 204);
+        // return back()->with('success', 'Podcast deleted successfully');
     }
 }

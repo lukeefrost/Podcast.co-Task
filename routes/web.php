@@ -15,10 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('Podcasts/index', 'PodcastController@index');
-Route::get('Podcasts/create', 'PodcastController@create');
-Route::post('Podcasts/create', 'PodcastController@store');
-Route::get('Podcasts/edit/{podcast}', 'PodcastController@edit');
-Route::post('Podcasts/edit/{podcast}', 'PodcastController@update');
-Route::get('Podcasts/delete/{podcast}', 'PodcastController@destroy');
-Route::get('Podcasts/show/{podcast}', 'PodcastController@show');
+Route::get('podcasts/index', 'PodcastController@index');
+Route::get('podcasts/create', 'PodcastController@create');
+Route::post('podcasts/create', 'PodcastController@store');
+Route::get('podcasts/edit/{podcast}', 'PodcastController@edit');
+Route::post('podcasts/edit/{podcast}', 'PodcastController@update');
+Route::get('podcasts/delete/{podcast}', 'PodcastController@destroy');
+Route::get('podcasts/show/{podcast}', 'PodcastController@show');
