@@ -1,6 +1,6 @@
 <?php
 
-namespace App;
+namespace App\Podcasts;
 
 use Illuminate\Database\Eloquent\Model;
 
