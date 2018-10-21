@@ -8,13 +8,13 @@
           <h2>Edit Podcast</h2>
       </div>
       <div class="pull-right">
-          <a class="btn btn-success" href="/Podcasts/index">Podcasts</a>
+          <a class="btn btn-success" href="/podcasts/index">Podcasts</a>
       </div>
   </div>
 </div>
 
 <div class="row">
-  <form action="/Podcasts/edit/{{ $podcast->id }}" method="POST">
+  <form action="/podcasts/edit/{{ $podcast->id }}" method="POST">
     {{ csrf_field }}
 
     <div class="col-xs-12 col-sm-12 col-md-12">

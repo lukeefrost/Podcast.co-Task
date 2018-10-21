@@ -8,7 +8,7 @@
             <h2>Podcast Details</h2>
         </div>
         <div class="pull-right">
-            <a class="btn btn-success" href="/Podcasts/create"> Create New Podcast</a>
+            <a class="btn btn-success" href="/podcasts/create"> Create New Podcast</a>
         </div>
     </div>
 </div>
@@ -30,9 +30,9 @@
     <td>{{ $podcast->episode_number }}</td>
     <td>{{ $podcast->created_at }}</td>
     <td>
-        <a class="btn btn-info" href="/Podcasts/show/{{ $podcast->id }}">Show</a>
-        <a class="btn btn-primary" href="/Podcasts/edit/{{ $podcast-> id}}">Edit</a>
-        <a class="btn btn-primary" href="/Podcasts/delete/{{ $podcast->id}}">Delete</a>
+        <a class="btn btn-info" href="/podcasts/show/{{ $podcast->id }}">Show</a>
+        <a class="btn btn-primary" href="/podcasts/edit/{{ $podcast-> id}}">Edit</a>
+        <a class="btn btn-primary" href="/podcasts/delete/{{ $podcast->id}}">Delete</a>
     </td>
   </tr>
 @endforeach

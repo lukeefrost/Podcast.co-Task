@@ -25,7 +25,7 @@
 @endif
 
 <div class="row">
-  <form action="/Podcasts/create" method="POST">
+  <form action="/podcasts/create" method="POST">
       {{ csrf_field() }}
           <div class="col-xs-12 col-sm-12 col-md-12">
               <div class="form-group">
